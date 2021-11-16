@@ -1,0 +1,131 @@
+body {
+	overflow-y: hidden;
+	/* Hide vertical scrollbar */
+	overflow-x: hidden;
+	/* Hide horizontal scrollbar */
+	overflow:  hidden;
+	height: 100%;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+#container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 4px;
+	grid-template-areas: "s1 s1" "s2 s2" "s3 s3";
+	text-align: center;
+	margin: 0 auto;
+	justify-content: center;
+	height: 100%;
+	min-height: 100%;
+	margin-top: 7px;
+}
+
+#s1 {
+	text-align: center;
+	grid-area: s1;
+	/* padding-left: 1px; */
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#s2 {
+	grid-area: s2;
+	justify-content: center;
+	margin: auto 0;
+	
+}
+
+#s3 {
+	grid-area: s3;
+}
+button{
+ margin: 3px;
+  max-width:150px;width:100%;
+  background-color: rgb(197, 44, 108);
+  color:aliceblue;
+  font-weight:bold;
+  border-radius: 5px;
+  border: 2px solid aliceblue;
+}
+section {
+	position: relative;
+	justify-content: center;
+	text-overflow: auto;
+	max-height: 270px;
+	overflow-y: scroll;
+	padding: 10px;
+	word-break: break-all;
+	height: fit-content;
+	color: #1f0d16;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 auto;
+	min-height: 56vmin;
+	width: 80vmin;
+	border-radius: 10px;
+	background-color: #86608348;
+	border: solid 2px #dd5050;
+	color: aliceblue;
+}
+#info{
+	border: solid 2px rgb(238, 238, 238);
+	border-radius: 5px;
+}
+img {
+	height:190px;
+	width: 190px;
+	border: solid 2px aliceblue;
+	border-radius: 5px;
+	
+}
+@media screen and (orientation: landscape) {
+	body {
+		flex-direction: row;
+		height: 100%;
+		width: 100%;
+	}
+	#container {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 5px;
+		grid-template-areas: 
+		"s1 s1" 
+		"s2 s3";
+		margin: auto;
+		margin-top: 10px;
+		height: 50px;
+	}
+	#s1 {
+		display: flex;
+		flex-direction: row;
+		max-height: 25px;
+		width: 97%;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	section {
+		height: 90px;
+		min-height: 10vmin;
+		width: 100vmin;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		overflow: hidden;
+	}
+	#s2, #s3 {
+		height: 40px;
+		min-height: 50vmin;
+		width: 100vmin;
+		margin: 0 auto;
+		padding : 7px;
+		overflow: hidden;
+	}
+}

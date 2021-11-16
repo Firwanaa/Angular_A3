@@ -1,0 +1,18 @@
+<div class="div1" id="container">
+  <section id="s1">
+    <button *ngFor="let item of myBookInfo; let i = index" (click)="onClick(i)">
+      <p>{{ item.BookTitle }}</p>
+    </button>
+  </section>
+  <section id="s3">
+    <img src="{{ pic }}" />
+  </section>
+  <section id="s2">
+    <div id="info">
+      <p>{{ BTitle }}</p>
+      <p>{{ BAuthor }}</p>
+      <p>{{ BGenre }}</p>
+      <p>{{ BYear }}</p>
+    </div>
+  </section>
+</div>
